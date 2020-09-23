@@ -1,0 +1,78 @@
+@import "variables";
+
+.header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  display: flex;
+  padding: 0 5%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  transition: all linear 0.2s;
+
+  &.came-down {
+    background-color: var(--background-color);
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.header-logo {
+  width: 25px;
+  padding-left: 175px;
+
+  @media screen and (max-width: 480px) {
+    padding-left: 0;
+  }
+}
+
+.header-title {
+  font-size: $ultra-font-size;
+
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
+}
+
+.header-sign-up {
+  font-size: $title-font-size;
+  font-weight: bold;
+  width: 200px;
+  white-space: nowrap;
+  text-align: left;
+
+  @media screen and (max-width: 480px) {
+    width: auto;
+  }
+}
+
+.header-sign-up-logout {
+  height: 100%;
+  max-width: calc(100% - 25px);
+  display: inline-flex;
+  align-items: center;
+  padding: 5px;
+  border-radius: 15px;
+  cursor: pointer;
+  justify-content: flex-end;
+
+  @media screen and (max-width: 480px) {
+    max-width: initial;
+  }
+}
+
+.header-sign-up-name {
+  display: inline-block;
+  max-width: calc(100% - 25px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.header-user-svg {
+  width: 17px;
+  vertical-align: top;
+  margin-top: 2px;
+  margin-left: 8px;
+}

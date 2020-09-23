@@ -1,0 +1,52 @@
+@import "variables";
+
+.next-previous-cont {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.next-previous-btn-link {
+  &.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+}
+
+.next-previous-btn {
+  font-weight: bold;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 25px;
+  padding: 10px 40px;
+  cursor: pointer;
+  transition: all linear 0.2s;
+
+  &.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &.done {
+    background-color: var(--primary-color);
+    color: var(--border-color);
+  }
+}
+
+.next-previous-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  fill: var(--primary-color);
+
+  &.previous {
+    right: 10px;
+    transform: rotate(180deg);
+    margin-top: -5px;
+  }
+
+  &.next {
+    left: 10px;
+  }
+}

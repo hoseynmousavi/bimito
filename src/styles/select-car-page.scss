@@ -1,0 +1,109 @@
+@import "variables";
+
+.select-car-page-container {
+  margin: 50px 10%;
+  width: 500px;
+
+  @media screen and (max-width: 480px) {
+    margin: 10px 5% 60px 5%;
+    width: 90%;
+  }
+}
+
+.select-car-page-title {
+  font-size: $mess-font-size;
+  margin-bottom: 20px;
+
+  @media screen and (max-width: 480px) {
+    text-align: center;
+  }
+}
+
+.select-car-page-desc {
+  color: var(--text-light-color);
+  font-weight: bold;
+
+  @media screen and (max-width: 480px) {
+    text-align: center;
+  }
+}
+
+.select-car-page-car-cont {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.select-car-page-car-type-parent {
+  position: relative;
+  display: inline-block;
+  width: 48%;
+
+  &.full-width {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+.select-car-page-car-type {
+  border: 1px solid var(--border-color);
+  color: var(--text-light-color);
+  padding: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+
+  &.disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+}
+
+.select-car-page-car-type-svg {
+  width: 10px;
+  transform: rotate(-90deg);
+  fill: var(--text-light-color);
+}
+
+.select-car-page-box-back {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  animation: fade-in ease 0.2s;
+}
+
+.select-car-page-box {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  right: 0;
+  background-color: var(--background-color);
+  z-index: 3;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  animation: box-in ease 0.2s;
+  height: 240px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.select-car-page-box-item {
+  padding: 10px;
+  cursor: pointer;
+  transition: all linear 0.2s;
+
+  &:hover {
+    background-color: var(--secondary-color);
+  }
+}

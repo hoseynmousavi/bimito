@@ -1,0 +1,50 @@
+@import "variables";
+
+.select-insure-page-container {
+  margin: 50px 10%;
+
+  @media screen and (max-width: 480px) {
+    margin: 10px 5% 60px 5%;
+  }
+}
+
+.select-insure-page-title {
+  font-size: $mess-font-size;
+  margin-bottom: 20px;
+
+  @media screen and (max-width: 480px) {
+    text-align: center;
+  }
+}
+
+.select-insure-choice {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  height: 130px;
+  border-radius: 5px;
+  border: 1px solid var(--border-color);
+
+  &.disabled {
+    margin-right: 20px;
+    pointer-events: none;
+    opacity: 0.5;
+    background-color: var(--border-color);
+  }
+
+  @media screen and (max-width: 480px) {
+    width: calc(50% - 12px); // 10px for margin right 20 and 2px for borders
+  }
+}
+
+.select-insure-choice-logo {
+  width: 30%;
+}
+
+.select-insure-choice-title {
+  font-size: $huge-font-size;
+  font-weight: bold;
+  margin-top: 10px;
+}
